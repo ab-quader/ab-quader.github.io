@@ -811,9 +811,41 @@
     .fade-in:nth-child(5) { animation-delay: 0.5s; }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .hero-photo { display: none; }
-    }
+   @media (max-width: 900px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 7rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-photo {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-frame {
+    width: 220px;
+    height: 280px;
+  }
+
+  .hero-links {
+    justify-content: center;
+  }
+
+  .hero-tag {
+    justify-content: center;
+  }
+}
 
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
