@@ -666,6 +666,46 @@
 
     .project-link:hover { gap: 0.6rem; }
 
+    /* ── UPDATES ── */
+    .updates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .update-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .update-photos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .update-photos img:only-child { grid-column: 1 / -1; }
+
+    .update-photos img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    .update-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+    }
+
     /* ── SKILLS ── */
     .skills-grid {
       display: grid;
@@ -869,6 +909,7 @@
     <div class="nav-logo">A. Quader</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#updates">Updates</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -986,9 +1027,44 @@
     </div>
   </section>
 
+  <!-- UPDATES -->
+  <!-- HOW TO ADD AN UPDATE: copy one <div class="project-card"> block below and paste it
+       at the TOP of the list (newest first). Then change the date, title, text, photos and links.
+       Photos go in an "images/updates/" folder next to index.html. -->
+  <section id="updates">
+    <div class="section-label">02 — Updates</div>
+    <h2 class="section-title">Latest News</h2>
+
+    <div class="updates-grid">
+
+      <div class="project-card">
+        <div class="project-icon">🎤</div>
+        <div class="update-date">23 June — 27 June 2026</div>
+        <div class="project-title">EULiST Student Conference 2026, Brno, Czechia</div>
+        <div class="project-desc">
+          Replace this text with a short description of the update: what you attended,
+          what you presented or learned, and who you met.
+        </div>
+        <!-- PHOTOS: one <img> per picture (delete this whole block if an update has no photos) -->
+        <div class="update-photos">
+          <img src="images/trt1.JPG" alt="Conference photo 1" loading="lazy" onerror="this.style.display='none'">
+          <img src="images/updates/example-2.jpg" alt="Conference photo 2" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="project-tags">
+          <span class="project-tag">Conference</span>
+          <span class="project-tag">Robotics</span>
+        </div>
+        <div class="update-links">
+          <a href="https://example.com" target="_blank" class="project-link">Conference website →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- EDUCATION -->
   <section id="education">
-    <div class="section-label">02 — Education</div>
+    <div class="section-label">03 — Education</div>
     <h2 class="section-title">Academic Background</h2>
     <div class="timeline">
 
@@ -1028,7 +1104,7 @@
 
   <!-- PUBLICATIONS -->
   <section id="publications">
-    <div class="section-label">03 — Publications</div>
+    <div class="section-label">04 — Publications</div>
     <h2 class="section-title">Research Output</h2>
 
     <div class="pub-card">
@@ -1059,7 +1135,7 @@
 
   <!-- PROJECTS -->
   <section id="projects">
-    <div class="section-label">04 — Projects</div>
+    <div class="section-label">05 — Projects</div>
     <h2 class="section-title">What I've Built</h2>
 
     <div class="projects-grid">
@@ -1131,7 +1207,7 @@
 
   <!-- SKILLS -->
   <section id="skills">
-    <div class="section-label">05 — Skills</div>
+    <div class="section-label">06 — Skills</div>
     <h2 class="section-title">Technical Stack</h2>
 
     <div class="skills-grid">
@@ -1229,7 +1305,7 @@
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="section-label">06 — Contact</div>
+    <div class="section-label">07 — Contact</div>
     <h2 class="section-title">Get in Touch</h2>
 
     <div class="contact-grid">
